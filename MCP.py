@@ -26,7 +26,7 @@ def mcp(all):
         t=temp.pop()
         nextlist=mcp(relation[t]&all)
         for n in nextlist:
-            result.append(set(t)|n)
+            result.append(set([t])|n)
             temp=temp-n
     return result
 for t in mcp(all):
